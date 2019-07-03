@@ -104,3 +104,8 @@ hr {
 input, select {
     vertical-align:middle;
 }
+
+.wrapper{
+  margin-top: auto;
+  width: auto;
+}
