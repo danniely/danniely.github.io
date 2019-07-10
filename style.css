@@ -12,19 +12,18 @@ abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
 b, i,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ol,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+caption, tfoot,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  background:transparent;
 }
 
 body {
@@ -32,7 +31,7 @@ body {
     background-color: white;
     text-align: center;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif, Calibri;
 }
 
 article,aside,details,figcaption,figure,
@@ -86,26 +85,429 @@ abbr[title], dfn[title] {
     cursor:help;
 }
 
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
 
 /* change border colour to suit your needs */
-hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
-}
+
 
 input, select {
     vertical-align:middle;
 }
 
-.wrapper{
-  margin-top: auto;
-  width: auto;
+.background-wrap{
+  z-index: -1000;
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#video-bg-elem{
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 80%;
+  min-width: 100%;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+.container{
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  z-index: 1000;
+  top: 0;
+  line-height:2;
+}
+
+.container.intro-text ul{
+  margin-top: 0;
+  list-style-type: none;
+}
+
+.container.intro-text li{
+  background-color: #7FB3D5
+  font-size: 20px;
+  color: white;
+}
+
+
+.container h1{
+  font-size: 65px;
+  font-weight: 300;
+  padding-top: 10%;
+}
+
+.container ul{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.container li{
+  display: inline;
+  margin: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}
+
+
+.container li a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.container li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
+
+.projects{
+  margin-top: 900px;
+  font-size: 20px;
+  z-index: 1000;
+  line-height:2;
+  text-align:center;
+  margin-bottom: 100px;
+}
+
+.projects li{
+
+  border-style: solid;
+  font-size: 40px;
+  border-radius:100%;
+  width: 250px; height:250px;
+  text-align: center;
+  line-height: 43px;
+  list-style-type: none;
+
+
+}
+
+.projects ul{
+  text-align: center;
+  margin-left: 600px;
+  margin-right: 600px;
+  list-style:none;
+  list-style-type: none;
+  padding: 0;
+
+}
+
+.skills .logo li{
+
+  border-style: solid;
+  font-size: 40px;
+  border-radius:100%;
+  width: 250px; height:250px;
+  text-align: center;
+  line-height: 43px;
+  list-style-type: none;
+
+
+}
+
+.skills.logo ul{
+  text-align: center;
+  margin-left: 600px;
+  margin-right: 600px;
+  list-style:none;
+  list-style-type: none;
+  padding: 0;
+
+}
+
+.education .logo li{
+
+  border-style: solid;
+  font-size: 40px;
+  border-radius:100%;
+  width: 250px; height:250px;
+  text-align: center;
+  line-height: 43px;
+  list-style-type: none;
+
+
+}
+
+.education.logo ul{
+  text-align: center;
+  margin-left: 600px;
+  margin-right: 600px;
+  list-style:none;
+  list-style-type: none;
+  padding: 0;
+
+}
+
+.skills{
+  margin-top: 100px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+
+.education{
+  margin-top: 600px;
+  font-size: 20px;
+  z-index: 1000;
+  line-height:2;
+  text-align: center;
+}
+
+.edu{
+  margin-bottom: 200px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.footer{
+
+  height: 150px;
+  position: relative;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+}
+
+.footer.footer-content{
+
+  position: relative;
+  bottom: 10px;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+
+.footer.footer-bottom{
+
+  position: relative;
+  bottom: 10px;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+
+.content-table{
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 0.9em;
+  width: 800px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  align-content: center;
+  text-align: center;
+
+
+}
+
+.content-table thead tr{
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+
+}
+
+.content-table.header{
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+
+  text-align: center;
+  align-content: center;
+}
+
+
+.content-table th,
+.content-table td{
+  padding: 12px 15px;
+  position: relative;
+
+      background-clip: padding-box; /* this has been added */
+      border-radius: 5px;
+
+      color: white;
+      border: 5px solid white;
+      text-align: center;
+
+}
+
+.content-table tbody tr{
+  border-bottom: 1px solid #dddddd;
+}
+
+.ProjectList{
+
+  width: 600px;
+  border-spacing: 40px;
+  border-radius: 5px;
+}
+
+.ProjectList th{
+
+  border: 1px solid black;
+  width: 300px;
+  border-spacing: 40px;
+  border-radius: 5px;
+
+}
+
+.ProjectList th a:hover {
+  display:block;
+  background-color: #D3D3D3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.edu ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+  font-family: monospace;
+}
+
+/* Style the list */
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/* Add shadows on hover */
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+/* Pricing header */
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+/* List items */
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Grey list item */
+.price.grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+#panel,#flip,#flip2,#flip3,#flip4,#panel2,#panel3,#panel4
+{
+
+text-align:left;
+width:100%;
+
+}
+#panel,#panel2,#panel3,#panel4
+{
+padding-bottom:50px;
+display:none;
+}
+#content{
+padding:50px;
+color:black;
+font-family: 'Open Sans',arial,sans-serif;
+width: 100%;
+height: 100%;
+word-wrap: break-word;
+line-height: 35px;
+}
+
+
+.Header
+{
+  margin:100px;
+  color: black;
+  background-color: white;
+  text-align: center;
+  height: 20px
+  width:80;
+  min-width: 600px;
+  border-width: 0;
+  border-style: solid;
+  border-right-width: 2px;
+  margin-bottom: 200px;
+
+}
+
+.edu{
+  text-align: center;
+  line-height: 30px;
+}
+
+
+
+nav
+{
+    display: inline-block;
+
+
+}
+
+nav ul
+{
+    list-style-type: none;
+	margin:0;
+	padding:0;
+
+}
+
+nav li
+{
+    display: inline-block;
+
+}
+
+nav a
+{
+    font-size: 15px;
+	font-family: 'Open Sans',arial,sans-serif;
+    color: #181818;
+    text-decoration: none;
+	padding-right:10px;
+	padding-left:8px;
+	text-transform: uppercase;
+	opacity: 0.6;
+	transition: opacity 0.2s linear 0s ;
+
+
+}
+
+nav a:hover
+{
+    /* background-color: #F0F0F0; */
+	opacity:1;
+
+}
+
+nav a:active
+{
+    /* background-color: #F0F0F0; */
+
+}
+/* Change the width of the three columns to 100%
+(to stack horizontally on small screens) */
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
 }
