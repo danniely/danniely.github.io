@@ -93,15 +93,7 @@ input, select {
     vertical-align:middle;
 }
 
-.background-wrap{
-  z-index: -1000;
-  width: 100%;
-  height: 80%;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  right: 0;
-}
+
 
 #video-bg-elem{
   position: absolute;
@@ -114,12 +106,22 @@ input, select {
 }
 
 .container{
+  color: white;
   position: absolute;
   width: 100%;
   min-height: 100%;
   z-index: 1000;
   top: 0;
   line-height:2;
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('img/chicago.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110% auto;
+
+}
+
+.container.intro-text{
+  margin-top: 300px;
 }
 
 .container.intro-text ul{
@@ -132,6 +134,7 @@ input, select {
   font-size: 20px;
   color: white;
 }
+
 
 
 .container h1{
@@ -150,18 +153,18 @@ input, select {
   margin: 50px;
   font-weight: bold;
   font-size: 20px;
-  color: black;
+  color: white;
 }
 
 
 .container li a{
-    color: #000000;
+    color: #FFFFFF;
     text-decoration: none;
 }
 
 .container li a:hover{
     text-decoration: underline;
-    color: black;
+    color: white;
 }
 
 
@@ -189,8 +192,8 @@ input, select {
 
 .projects ul{
   text-align: center;
-  margin-left: 600px;
-  margin-right: 600px;
+  display: flex;
+  justify-content: center;
   list-style:none;
   list-style-type: none;
   padding: 0;
@@ -212,8 +215,8 @@ input, select {
 
 .skills.logo ul{
   text-align: center;
-  margin-left: 600px;
-  margin-right: 600px;
+  display: flex;
+  justify-content: center;
   list-style:none;
   list-style-type: none;
   padding: 0;
@@ -235,8 +238,8 @@ input, select {
 
 .education.logo ul{
   text-align: center;
-  margin-left: 600px;
-  margin-right: 600px;
+  display: flex;
+  justify-content: center;
   list-style:none;
   list-style-type: none;
   padding: 0;
