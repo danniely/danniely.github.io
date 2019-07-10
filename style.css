@@ -103,6 +103,7 @@ input, select {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 300px;
 
 }
 
@@ -163,7 +164,7 @@ input, select {
 
 
 .projects{
-  margin-top: 300px;
+  margin-top: 100% auto;
   font-size: 20px;
   z-index: 1000;
   line-height:2;
