@@ -99,10 +99,10 @@ input, select {
 .container{
   height: 100%;
   color: white;
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('img/chicago.jpg'), fixed;
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('img/chicago.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover auto;
   margin-bottom: 300px;
 
 }
@@ -115,8 +115,8 @@ input, select {
   margin: 0;
 }
 
-.container.intro-text{
-  margin-top: 300px;
+.container .intro-text{
+  margin-top: 50% auto;
 }
 
 .container.intro-text ul{
@@ -166,7 +166,6 @@ input, select {
 .projects{
   margin-top: 100% auto;
   font-size: 20px;
-  z-index: 1000;
   line-height:2;
   text-align:center;
   margin-bottom: 100px;
@@ -181,6 +180,7 @@ input, select {
   text-align: center;
   line-height: 43px;
   list-style-type: none;
+  border-width: 10px;
 
 
 }
@@ -205,6 +205,7 @@ input, select {
   line-height: 43px;
   list-style-type: none;
   list-style:none;
+  border-width: 10px;
 
 
 }
@@ -229,6 +230,7 @@ input, select {
   line-height: 43px;
   list-style-type: none;
   list-style-position:inside;
+  border-width: 10px;
 
 
 }
