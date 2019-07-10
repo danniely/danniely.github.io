@@ -209,17 +209,18 @@ input, select {
   text-align: center;
   line-height: 43px;
   list-style-type: none;
+  list-style:none;
 
 
 }
 
-.skills.logo ul{
+.skills .logo ul{
   text-align: center;
   display: flex;
   justify-content: center;
   list-style:none;
   list-style-type: none;
-  padding: 0;
+  list-style-position:inside;
 
 }
 
@@ -232,17 +233,19 @@ input, select {
   text-align: center;
   line-height: 43px;
   list-style-type: none;
+  list-style-position:inside;
 
 
 }
 
-.education.logo ul{
+.education .logo ul{
   text-align: center;
   display: flex;
   justify-content: center;
-  list-style:none;
   list-style-type: none;
-  padding: 0;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 
 }
 
