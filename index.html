@@ -1,225 +1,308 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Hyunho Lee</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/collapse.js"></script>
-  <script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danniel Lee | Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-blue: #1a73e8;
+            --text-main: #3c4043;
+            --text-light: #70757a;
+            --bg-gray: #f8f9fa;
+        }
 
-  </script>
+        body {
+            font-family: 'Google Sans', Arial, sans-serif;
+            margin: 0;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: #fff;
+        }
 
+        nav {
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            z-index: 10;
+            border-bottom: 1px solid #dadce0;
+        }
 
+        .hero {
+            padding: 80px 10% 40px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.2rem;
+            margin: 0;
+            color: #202124;
+            line-height: 1.1;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: var(--text-light);
+            max-width: 600px;
+        }
+
+        .profile-pic {
+            width: 220px;
+            height: 220px;
+            border-radius: 30px;
+            object-fit: cover;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            padding: 40px 10%;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--bg-gray);
+            padding-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #dadce0;
+            transition: 0.3s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            border-color: var(--brand-blue);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .card img {
+            height: 35px;
+            margin-bottom: 20px;
+            align-self: flex-start;
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .full-time {
+            background: #e8f0fe;
+            color: var(--brand-blue);
+        }
+
+        .internship {
+            background: #fef7e0;
+            color: #b06000;
+        }
+
+        .yoe-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .impact-headline {
+            color: var(--brand-blue);
+            font-weight: 700;
+            font-size: 1.15rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--bg-gray);
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin: 4px 4px 0 0;
+            color: var(--text-light);
+        }
+
+        .project-link {
+            margin-top: auto;
+            color: var(--brand-blue);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding-top: 15px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <div class="container">
+    <nav>
+        <div style="font-weight: 700; font-size: 24px;">Danniel <span style="color: var(--brand-blue);">Lee</span></div>
+        <div>
+            <a href="https://www.linkedin.com/in/hyunholee7979/" target="_blank"
+                style="text-decoration: none; color: var(--brand-blue); font-weight: 500;">LinkedIn</a>
+        </div>
+    </nav>
 
-    <div class="banner">
-      <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="mailto:dlgusgh7979@gmail.com?Subject=Message" target="_top">Contact</a></li>
-      <li><a href="resume/index.html" target="_top">Resume</a></li>
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Building Scalable <br>Infrastructure.</h1>
+            <p>Software Engineer specialized in <b>Data Engineering</b> and <b>Distributed Systems</b>. Currently
+                focused on enhancing release stability and system reliability at <b>Meta Reality Labs</b>.</p>
+        </div>
+        <img src="profile.jpeg" class="profile-pic" alt="Danniel Lee">
+    </header>
 
-      </ul>
-    </div>
-
-                  <div class="intro-text">
-                    <h1>
-                      <img src="img/PF.jpg" alt="profile" style="width: 300px; border-radius: 50%;">
-                      <p>Hyunho Lee</p>
-                      <ul style="font-size:20px; padding: 0;display: flex; justify-content: center;">
-                        <li>Computer science & Statistics</li>
-                        <li>|</li>
-                        <li style="color: orange;">Champaign, IL</li>
-                      </ul>
-                    </h1>
-
-                  </div>
-  </div>
-
-  <div class="projects">
-
-    <ul>
-      <li>
-      <br>
-      <img src="img/project.png" alt="project" style="width: 100px">
-      <p>Projects</p>
-      </li>
-    </ul>
-    <p style="padding: 40px;">As a student studying computer science, I do many kinds of things to
-      appreciate the benefits from coding. I find it worthy.
-      There are no certain criteria to choose a topic. Whenever I feel curious about something, I start working on.</p>
-  </div>
-
-
-
-  <div class="Header">
-				<nav>
-          <ul>
-            <li><a id="flip" href="#!" style="font-size: 20px; color: black;margin:10px; border-style: solid; padding: 6px; border-radius:10px; ">Used Car Price</a></li>
-            <li><a id="flip2" href="#!" style="font-size: 20px; color: black;margin:10px; border-style: solid; padding: 6px; border-radius:10px; ">Zombie game</a></li>
-            <li><a id="flip3" href="#!" style="font-size: 20px; color: black;margin:10px; border-style: solid; padding: 6px; border-radius:10px; ">Word game</a></li>
-          </ul>
-        </nav>
-
-			<div id="Container">
-
-				<div id="layer">
-
-					<div id="panel" class="close">
-						<div id="content">
-              <img src="project/used_car_price.png" style="width: 500px; margin-right: 20px" alt="project" align=left>
-              <p align=left>This project 'Used Car Price' is to provide an estimated price of used cars to users.
-                Using real dataset of used cars in the United States, obtain samples with fixed size.
-                By applying regression to the samples, deduce price drop tendency, categorized by each
-                brand.
-                For each car model, used BeautifulSoup library to do web crawling, then obtain the latest
-                car price for each car.
-                <br>After showing a general price variation tendency of each bar brand and model, it allows users to find an estimated price for a car with given car brands, model, year and
-                mileage.
-              </p>
-              <br></br>
-              <a href="https://github.com/danniely/Used-Car-Price">View Code</a>
+    <section class="section">
+        <h2 class="section-title">Professional Chapters</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="badge full-time">Full-time</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta">
+                <span class="yoe-label">YOE: ~1 Year (Current)</span>
+                <span class="impact-headline">Saved 1.5 Million Devices</span>
+                <p>Led rollout guardrails for <b>Meta Quest 3/3S</b>. Prevented high-severity incidents,
+                    avoiding <b>~$35M</b> in global device-impact costs.</p>
+                <div class="pill-container">
+                    <span class="pill">Horizon OS</span>
+                    <span class="pill">A/B Testing</span>
+                    <span class="pill">Configuration Management</span>
+                </div>
             </div>
-					</div>
 
-					<div id="panel2" class="close">
-            <div id="content">
-              <img src="project/zombie_game.png" style="width: 500px; margin-right: 20px" alt="project" align=left>
-              <p align=left>This is a 2d, top-down zombie defense game.
-                <br>
-              </p>
-              <br></br>
-              <a href="https://github.com/danniely/2d_zombie_game">View Code</a>
+            <div class="card">
+                <span class="badge full-time">Full-time</span>
+                <img src="https://i.namu.wiki/i/1F4M-leE_WxBf_XAMWDoXRT-SbPP5qRjSfqMCx260xPqhJ1vuPvICcfjzVN_ifWuQ38YZxDQnrQs7aHYTgFHXAH-q1hHNMxvMCxEIZWt5QZcg1AmaphohPH-E8xK79fVRAh_euC0LnDJOLTCt96gJY9Z3Jh7g4VmMoGQH1jhaAc.svg"
+                    alt="Ridi">
+                <span class="yoe-label">YOE: 11 Months</span>
+                <span class="impact-headline">70% Data Latency Reduction</span>
+                <p>Built scalable PySpark pipelines on Kubernetes. Migrated ML data pipelines from EMR to EKS,
+                    reducing latency by 70%.</p>
+                <div class="pill-container">
+                    <span class="pill">PySpark</span>
+                    <span class="pill">Kubernetes</span>
+                    <span class="pill">Apache Spark</span>
+                </div>
             </div>
-					</div>
 
-          <div id="panel3" class="close">
-						<div id="content">
-              <img src="project/word.png" style="width: 500px; margin-right: 20px" alt="project" align=left>
-              <p align=left>This is a website where you can play a simple word relay game!
-              </p>
-              <br></br>
-              <a href="https://github.com/danniely/react_test">View Code</a>
+            <div class="card">
+                <span class="badge full-time">Full-time</span>
+                <img src="https://i.namu.wiki/i/1F4M-leE_WxBf_XAMWDoXRT-SbPP5qRjSfqMCx260xPqhJ1vuPvICcfjzVN_ifWuQ38YZxDQnrQs7aHYTgFHXAH-q1hHNMxvMCxEIZWt5QZcg1AmaphohPH-E8xK79fVRAh_euC0LnDJOLTCt96gJY9Z3Jh7g4VmMoGQH1jhaAc.svg"
+                    alt="Ridi">
+                <span class="yoe-label">YOE: 1 Year 10 Months</span>
+                <span class="impact-headline">65% API Latency Reduction</span>
+                <p>Optimized database calls using <b>GraphQL Dataloader</b> in Node.js. Led porting of 4
+                    micro-services into a single monolithic repository.</p>
+                <div class="pill-container">
+                    <span class="pill">Node.js</span>
+                    <span class="pill">GraphQL</span>
+                    <span class="pill">Feature Flagging</span>
+                </div>
             </div>
-					</div>
 
-					<div id="panel4" class="close">
-						<div id="content">Anatomy is destiny555.</div>
-					</div>
-				</div>
-			</div>
+            <div class="card">
+                <span class="badge internship">Internship</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Samsung_logo_wordmark.svg/1920px-Samsung_logo_wordmark.svg.png?20240805151810"
+                    alt="Samsung">
+                <span class="impact-headline">27% Faster Build Times</span>
+                <p>Migrated from XML to <b>Jetpack Compose</b>. Refactored redundant logic and optimized build
+                    time by 27%.</p>
+                <div class="pill-container">
+                    <span class="pill">Jetpack Compose</span>
+                    <span class="pill">Android</span>
+                    <span class="pill">Mobile Dev</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	</div>
+    <section class="section" style="background-color: var(--bg-gray); border-radius: 40px; margin: 0 5%;">
+        <h2 class="section-title">Personal Projects</h2>
+        <div class="grid">
+            <div class="card" style="background: white;">
+                <h3 style="margin: 0 0 10px 0;">Orloo</h3>
+                <span class="impact-headline">HealthTech Monitoring</span>
+                <p>Developed pressure-sensor-driven remote orthodontic monitoring solution. Implemented early MVP
+                    hardware prototyping and clinician data pipelines.</p>
+                <a href="https://www.orloo.us" class="project-link" target="_blank">Visit Project →</a>
+            </div>
 
-  <br></br>
+            <div class="card" style="background: white;">
+                <h3 style="margin: 0 0 10px 0;">Fake News Buster</h3>
+                <span class="impact-headline">AI Fact-Checking</span>
+                <p>Built an AI-powered platform using LLMs and RAG. Designed end-to-end claim verification pipelines
+                    with source-backed citations.</p>
+                <a href="https://fake-news-buster.vercel.app" class="project-link" target="_blank">Visit Project →</a>
+            </div>
 
-  <div class="skills">
+            <div class="card" style="background: white;">
+                <h3 style="margin: 0 0 10px 0;">Mappin</h3>
+                <span class="impact-headline">Social Geospatial App</span>
+                <p>Deployed Flutter-based iOS app for real-time bookmark and photo sharing using Firebase and Google
+                    Maps API.</p>
+                <a href="https://jonah8838.softr.app" class="project-link" target="_blank">Visit Project →</a>
+            </div>
+        </div>
+    </section>
 
-    <ul class="logo" style="padding: 0;display: flex; justify-content: center;">
-      <li>
-      <br>
-      <img src="img/pencil.png" alt="project" style="width: 100px">
-      <p>Skills</p>
-      </li>
-    </ul>
-
-    <div class="columns">
-      <ul class="price">
-        <li class="header" style="border-radius: 10px 10px 0 0 ">Language</li>
-
-        <li>Python</li>
-        <li>C++</li>
-        <li>Java</li>
-        <li>HTML/CSS</li>
-
-      </ul>
-    </div>
-
-    <div class="columns">
-      <ul class="price">
-        <li class="header"  style="border-radius: 10px 10px 0 0">Online Coding</li>
-
-        <li><img src="img/hacker_rank.png" style="height:70px;"alt="">
-        </li>
-        <li><img src="img/leetcode.png" style="height:70px;"alt=""></li>
-
-      </ul>
-    </div>
-
-    <div class="columns">
-      <ul class="price">
-        <li class="header" style="border-radius: 10px 10px 0 0">Certificate</li>
-
-        <li><img src="img/edx.png" style="height:30px;"alt=""></li>
-
-      </ul>
-    </div>
-
-    </body>
-    </html>
-
-</div>
-
-
-
-  <div class="education" style="display: flex;  justify-content: center;">
-
-    <ul class="logo" style="padding: 0;display: flex; justify-content: center;">
-      <li>
-      <br>
-      <img src="img/education.png" alt="project" style="width: 100px">
-      <p>Education</p>
-      </li>
-    </ul>
-
-</div>
-
-<br></br>
-<br>
-
-  <div class="edu">
-    <table>
-      <ul>
-        <img src="img/uiuc.jpg"style="width:50px; text-align: center;" alt="">
-        <li style="font-weight: bold; font-size: 25px">University of Illinois Urbana-Champaign</li>
-        <p>BS - Statistics & Computer Science</p>
-        <p style="color: grey">2019 - present</p>
-      </ul>
-      <img src="img/connector.png" style="width: 60px;"alt="">
-      <ul style="list-style: none">
-        <img src="img/dvc.png"style="width:50px;" alt="">
-        <li style="font-weight: bold; font-size: 25px">Diablo Valley College</li>
-        <p>AA - Statistics</p>
-        <p style="color: grey">2018 - 2019</p>
-      </ul>
-    </table>
-
-  </div>
-</div>
-
-  <div class="footer">
-      <div class="footer-content">
-        <h1 style="font-size:40px">
-          <a href="https://www.linkedin.com/in/hyunholee7979/"><img src="img/linkedin.png" alt="footer" style="width: 50px; margin-left: 15px; margin-right: 15px"></a>
-          <a href="https://github.com/danniely"><img src="img/github.png" alt="footer" style="width: 50px;margin-left: 15px; margin-right: 15px"></a>
-          <a href="mailto:dlgusgh7979@gmail.com?Subject=Message" target="_top"><img src="img/google.png" alt="footer" style="width: 50px;margin-left: 15px; margin-right: 15px"></a>
-          <br></br>
-
-
-      </div>
-
-      <div class="footer-bottom">
-        &copy; Copyright 2019 | Designed by Daniel Lee Hyunho
-      </div>
-
-
-  </div>
-
-<script src="js/collapse.js"></script>
-
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        <div
+            style="display: flex; align-items: center; gap: 30px; padding: 30px; border: 1px solid #dadce0; border-radius: 16px;">
+            <img src="https://brand.illinois.edu/wp-content/uploads/2024/02/Block-I-orange-blue-background.png"
+                height="70" alt="UIUC">
+            <div>
+                <h3 style="margin: 0; font-size: 1.4rem;">University of Illinois at Urbana-Champaign</h3>
+                <p style="margin: 5px 0; color: var(--brand-blue); font-weight: 500;">B.S. in Computer Science +
+                    Statistics</p>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--text-light);">Aug 2019 – Dec 2024</p>
+            </div>
+        </div>
+    </section>
 
 </body>
+
 </html>
